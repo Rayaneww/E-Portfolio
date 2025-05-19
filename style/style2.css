@@ -1,0 +1,590 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1f26;
+  color: #fff;
+  animation: fadeInBody 1s ease-in;
+  padding-top: 80px; /* important pour ne pas masquer le contenu sous le header fixe */
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background-color: #1e1f26;
+  padding: 20px 0;
+  border-bottom: 1px solid #444;
+  animation: fadeInDown 1s ease-in;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* pour qu’il soit au-dessus de tout */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  color: #f9b233;
+  font-weight: bold;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f9b233;
+}
+
+nav a.active {
+  color: #f9b233;
+  border-bottom: 2px solid #f9b233;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #2b2c34;
+  padding: 50px 0;
+  animation: fadeInUp 1s ease-in;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero .text h1 {
+  font-size: 2.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #f9b233;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+  display: inline-block;
+}
+
+.hero .text span {
+  color: #f9b233;
+}
+
+.hero .btn {
+  display: inline-block;
+  background-color: #f9b233;
+  color: #000;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  transform: scale(1.05);
+  background-color: #ffc94c;
+}
+
+.hero .image img {
+  width: 250px;
+  border-radius: 10px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* Sections */
+section {
+  width: 100vw;               /* Prend toute la largeur visible */
+  position: relative;         /* Pour gérer le déplacement */
+  left: 50%;                 
+  right: 50%;
+  margin-left: -50vw;         /* Décale à gauche pour coller au bord */
+  margin-right: -50vw;        /* Décale à droite pour coller au bord */
+  padding: 60px 20px;         /* Espacement intérieur */
+  box-sizing: border-box;     /* Inclure padding dans la largeur */
+  background-color: #1e1f26;  /* Couleur de fond par défaut */
+}
+
+
+/* Couleur différente pour sections alternées (ex: toutes les sections paires) */
+section.alt, section:nth-of-type(even) {
+  background-color: #2b2c34;
+}
+/* Sections alternées pour différencier visuellement */
+section:nth-of-type(odd) {
+  background-color: #1e1f26;
+}
+
+section:nth-of-type(even) {
+  background-color: #292a33;
+}
+
+.skills-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.skill-btn {
+  background-color: #f9b233;
+  border: none;
+  padding: 20px 15px 15px; /* plus de padding en haut pour laisser de la place à l'image */
+  border-radius: 25px;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex: 1 1 150px;
+  text-align: center;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-icon {
+  width: 40px;    /* taille de l’icône */
+  height: 40px;
+  object-fit: contain;
+}
+
+.skill-btn:hover {
+  background-color: #ffc94c;
+  transform: scale(1.05);
+}
+
+.skill-btn:active {
+  animation: pop 0.3s forwards;
+}
+
+.skill-btn.active {
+  background-color: #d49e16;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #d49e16;
+}
+
+
+.skill-desc {
+  margin-top: 30px;
+  background-color: #333;
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: #fff;
+  min-height: 60px;
+  font-size: 1em;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none; /* éviter interaction quand invisible */
+  user-select: none;
+}
+
+.skill-desc.visible {
+  opacity: 1;
+  pointer-events: auto;
+  user-select: auto;
+}
+/* Animation "pop" */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* projet */
+/* Carousel Projets */
+.carousel {
+  position: relative;
+  overflow: visible; /* pour voir les slides latérales */
+  width: 900px;       /* taille fixe */
+  margin: 40px auto 60px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-slide {
+  flex: 0 0 80%;  /* chaque slide prend 80% du carousel */
+  box-sizing: border-box;
+  margin: 0 10px;
+  background-color: #222;
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.4s ease;
+  filter: blur(3px);
+  opacity: 0.5;
+  transform: scale(0.9);
+  z-index: 0;
+}
+
+.carousel-slide.active {
+  filter: none;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.carousel-slide img {
+  max-width: 50%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.carousel-slide h3 {
+  margin-bottom: 15px;
+  color: #f9b233;
+  font-size: 1.6em;
+}
+
+.carousel-slide p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 25px;
+  text-align: left;
+  width: 100%;
+  color: #ddd;
+}
+
+/* Boutons navigation */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f9b233;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5em;
+  border-radius: 5px;
+  color: #000;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background-color: #ffc94c;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Bouton GitHub */
+/* ===== Bouton GitHub circulaire ===== */
+.github-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 0;           /* enlève marges éventuelles */
+  padding: 0;          /* enlève padding éventuel */
+  vertical-align: middle; /* aide pour l’alignement inline */
+}
+
+.github-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: invert(100%);
+  display: block;
+  margin: 0;            /* enlève marges internes */
+  padding: 0;
+}
+
+
+.github-icon:hover {
+  background-color: #6cc644; /* fond vert au hover */
+  transform: scale(1.1);
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #7a2b2b; /* couleur inspirée de ton thème */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-link:hover {
+  background-color: #5a1b1b;
+}
+
+/* Contact */
+.contact-bubble {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #7a2b2b;
+  color: white;
+  border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 9999;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-bubble:hover,
+.contact-bubble:focus {
+  width: 500px; /* s'étend vers la gauche */
+  border-radius: 40px;
+}
+
+.contact-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  margin-left: 16px;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.contact-bubble:hover .contact-icon,
+.contact-bubble:focus .contact-icon {
+  transform: translateX(0);
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 20px;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(20px);
+  font-weight: bold;
+  color: #f9b233;
+}
+
+.contact-bubble:hover .contact-details,
+.contact-bubble:focus .contact-details {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  /* Optionnel, pour que les icônes remplissent l’espace en largeur */
+  width: 100%; 
+}
+
+.social-links a {
+  flex: 1; /* Chaque lien prend une part égale */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto; /* ignore la largeur fixe */
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a img {
+  width: 24px;  /* taille fixe de l’icône */
+  height: 24px;
+  object-fit: contain;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(102%) contrast(102%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover img {
+  filter: invert(70%) sepia(100%) saturate(500%) hue-rotate(10deg) brightness(120%) contrast(90%);
+  transform: scale(1.2);
+}
+
+
+.contact-bubble.active {
+  width: 300px !important;
+  border-radius: 40px !important;
+}
+
+.contact-bubble.active .contact-details {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateX(0) !important;
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #444;
+  animation: fadeInUp 1.2s ease-in;
+}
+
+/* Fade-in sections */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Animations --- */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSection {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #f9b233;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero .image img {
+    width: 180px;
+    margin-top: 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .skills-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 100px;
+    height: 100px;
+  }
+}
