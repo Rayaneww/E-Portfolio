@@ -11,13 +11,18 @@
   <header>
     <div class="container nav">
       <div class="logo">RW</div>
-      <nav>
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="main-nav">
         <a href="#profil">Profil</a>
-        <a href="#Stage">Stage</a>
-        <a href="#formation">Formation</a>
+        <a href="#formations">Formations</a>        
+        <a href="#Stages">Stages</a>
         <a href="#competences">Compétences</a>
-        <a href="#Projet">Projet</a>
-        <a href="#contact">Contact</a>
+        <a href="#Projets">Projet</a>
+        <a href="#veille">Veille technologique</a>
       </nav>
     </div>
   </header>
@@ -47,32 +52,34 @@
     </div>
   </section>
 
-  <section id="Stage" class="fade-in-section">
-    <div class="container">
-      <h2>Stage</h2>
-      <ul>
-        <li><strong>Première année :</strong>J’ai effectué mon stage de première année au sein de l’entreprise Loiselet & Daigremont, spécialisée dans la gestion immobilière, où j’ai été intégré à la section informatique. Ce stage m’a permis de découvrir le fonctionnement du support technique, et une participation à la création d’une base de données est prévue pour la suite du stage</li>
-        <li><strong>Deuxième année :</strong> ...</li>
-      </ul>
-  </div>
-  </section>
 
-  <section id="formation" class="alt fade-in-section">
+  <section id="formations" class="fade-in-section">
      <div class="container">
-      <h2>Formation</h2>
+      <h2>Formations</h2>
       <ul>
         <li><strong>2024/25 :</strong> BTS SIO – Cybersécurité (SLAM) – Lycée René Descartes (77420)</li>
         <p>Actuellement j'entame un BTS SIO (Service Informatique aux Organisations), plus précisément dans l'option SLAM. Cela signifie que l'option se concentre sur le développement de logiciels et d'applications pour les entreprises. On apprend à concevoir des solutions informatiques adaptées aux besoins des organisations, en développant des applications, des sites web et des logiciels sur mesure. L'option SLAM me permet d'approfondir mes compétences en programmation et en gestion de projets informatiques.</p>
 
         <li><strong>2023/24 :</strong> L1 Informatique – CNAM (75003)</li>
         <p>En licences j'ai appris les bases de l'informatique : programmation, algorithmique, systèmes d’exploitation, etc. L'objectif était de construire des fondations solides pour poursuivre mes études, vers des spécialisations dans des domaines comme le développement, la cybersécurité ou l'intelligence artificielle.</p>
-        <li><strong>2022/23 :</strong> BAC Spécialisation Mathématiques/SVT au Lycée Samuel Beckett (77260) avec mention Assez bien</p>
+        <li><strong>2022/23 :</strong> Baccalauréat Spécialité Mathématiques/SVT au Lycée Samuel Beckett (77260) avec mention Assez bien</p>
         <p>J'ai obtenu mon baccalauréat avec une spécialisation en mathématiques et en sciences de la vie et de la terre (SVT). Je me suis concentré sur des matières scientifiques, ce qui m'a permis de développer un raisonnement logique et une capacité à analyser des problèmes complexes. J'ai donc finalement obtenu mon Baccalauréat avec une mention assez bien.</p>
 
         <li><strong>2022 :</strong> Certification PIX – Lycée Samuel Beckett</li>
         <p>Enfin, j'ai aussi passé la certification PIX, qui est une évaluation de mes compétences numériques. PIX évalue les niveaux dans des domaines comme l’utilisation d’outils numériques, la recherche d’informations, la communication en ligne, et la protection de la vie privée. C’est un certificat utile dans le monde professionnel, car il prouve que nous maîtrisons les bases des technologies numériques.</p>
       </ul>
     </div>
+  </section>
+
+  <section id="Stages" class=" alt fade-in-section">
+    <div class="container">
+      <h2>Stages</h2>
+      <ul>
+        <li><strong>Première année :</strong>J’ai effectué mon stage de première année au sein de l’entreprise Loiselet & Daigremont, spécialisée dans la gestion immobilière, où j’ai été intégré à la section informatique. Loiselet & Daigremont est une société anonyme au capital de 3 000 000 euros. Son siege est au 35 ter, avenue André Morizet - 92100 Boulogne.Son directeur general est Philippe Loiselet et mon tuteur de stage est Christophe Rousseau. </li>
+        <br>
+        <li><strong>Deuxième année :</strong> ...</li>
+      </ul>
+  </div>
   </section>
 
 <section id="competences" class="alt fade-in-section">
@@ -84,6 +91,9 @@
       <button class="skill-btn"
               data-desc="HTML (HyperText Markup Language) structure le contenu d’une page web : paragraphes, listes, images, tableaux, etc.">
         <img src="images/html.png" alt="HTML" class="skill-icon" />
+        <div class="progress-container">
+          <div class="progress-bar" style="width: 65%;">65%</div>
+        </div>
         HTML
       </button>
 
@@ -91,6 +101,9 @@
       <button class="skill-btn"
               data-desc="Java est un langage orienté objet, portable grâce à la JVM ; il sert au développement d’applications web, Android et solutions d’entreprise.">
         <img src="images/java.png" alt="Java" class="skill-icon" />
+        <div class="progress-container">
+          <div class="progress-bar" style="width: 80%;">80%</div>
+        </div>
         Java
       </button>
 
@@ -98,13 +111,19 @@
       <button class="skill-btn"
               data-desc="PHP 8.x, langage côté serveur : architecture MVC, requêtes préparées (PDO) et bonnes pratiques sécurité pour le back-end web.">
         <img src="images/php.png" alt="PHP" class="skill-icon" />
+        <div class="progress-container">
+          <div class="progress-bar" style="width: 75%;">75%</div>
+        </div>
         PHP
       </button>
 
       <!-- Visual Studio Code -->
       <button class="skill-btn"
               data-desc="Visual Studio Code : éditeur extensible avec débogage, IntelliSense, snippets, refactorisation et Git intégré.">
-        <img src="images/VS.png" alt="Visual Studio Code" class="skill-icon" />
+        <img src="images/vs.png" alt="Visual Studio Code" class="skill-icon" />
+        <div class="progress-container">
+          <div class="progress-bar" style="width: 80%;">80%</div>
+        </div>
         Visual Studio Code
       </button>
 
@@ -112,20 +131,86 @@
       <button class="skill-btn"
               data-desc="DrJava : IDE léger destiné à l’apprentissage, permet d’écrire, compiler et exécuter du Java rapidement (projet de licence).">
         <img src="images/dr_java.png" alt="DrJava" class="skill-icon" />
+        <div class="progress-container">
+          <div class="progress-bar" style="width: 65%;">65%</div>
+        </div>
         DrJava
       </button>
 
       <!-- Eclipse -->
       <button class="skill-btn"
               data-desc="Eclipse : IDE Java complet avec gestion de projets multi-modules, Maven/Gradle, plugins qualité (Checkstyle, SonarLint).">
-        <img src="images/Eclipse.png" alt="Eclipse" class="skill-icon" />
+        <img src="images/eclipse.png" alt="Eclipse" class="skill-icon" />
+        <div class="progress-container">
+          <div class="progress-bar" style="width: 90%;">80%</div>
+        </div>
         Eclipse
       </button>
     </div>
 
     <div class="skill-desc" id="skill-description"></div>
-  </div>
-</section>
+  
+    <h2>Soft skills</h2>
+    <div class="skills-grid">
+      <div class="soft-skill-card">
+        <img src="images/esprit.jpg" alt="Esprit d'équipe" class="skill-icon" />
+        Esprit d'équipe
+      </div>
+      <div class="soft-skill-card">
+        <img src="images/creativite.png.png" alt="Créativité" class="skill-icon" />
+        Créativité
+      </div>
+      <div class="soft-skill-card">
+        <img src="images/comm.png" alt="Communication" class="skill-icon" />
+        Communication
+      </div>
+      <div class="soft-skill-card">
+        <img src="images/ada.png" alt="Adaptabilité" class="skill-icon" />
+        Adaptabilité
+      </div>
+    </div>
+        
+    <br>
+    <h2>Langues</h2>
+    <div class="skills-grid">
+      <button class="language-btn" data-level="Natif">
+        <div class="language-card">
+          <div class="language-front">
+            <img src="images/france.png" alt="Français" class="skill-icon" />
+            Français
+          </div>
+          <div class="language-back">
+            <div style="font-size: 1.5em; margin-bottom: 10px;">🇫🇷</div>
+            <div style="font-size: 0.9em;">Niveau: Natif</div>
+          </div>
+        </div>
+      </button>
+            <button class="language-btn" data-level="Natif">
+        <div class="language-card">
+          <div class="language-front">
+            <img src="images/uk.png" alt="Français" class="skill-icon" />
+            Anglais
+          </div>
+          <div class="language-back">
+            <div style="font-size: 1.5em; margin-bottom: 10px;">🇫🇷</div>
+            <div style="font-size: 0.9em;">Niveau: Natif</div>
+          </div>
+        </div>
+      </button>
+            <button class="language-btn" data-level="Natif">
+        <div class="language-card">
+          <div class="language-front">
+            <img src="images/allemagne.png" alt="Français" class="skill-icon" />
+            Allemand
+          </div>
+          <div class="language-back">
+            <div style="font-size: 1.5em; margin-bottom: 10px;">🇫🇷</div>
+            <div style="font-size: 0.9em;">Niveau: Natif</div>
+          </div>
+        </div>
+      </button>
+    </div>
+  </section>
 
 
 <section id="Projets">
@@ -148,14 +233,10 @@
           <img src="images/erreur.png" alt="Projet 2" />
           <h3>Projet 2 - Projet correcteur automatique d'erreurs</h3>
           <p>Ce projet permet de corriger automatiquement une erreur. Cela sous la forme d'un jeu qui est-ce ?</p>
-          <!-- Lien visible -->
           <a href="http://btsio.org/2025/watteeuwr/Qui-est-ce/Qui-est-ce.php" target="_blank" rel="noopener noreferrer" class="btn-link">Voir le site</a>
           <br>
           <br>
-          <a href="https://github.com/Rayaneww/Projet-correcteur-automatique-d-erreurs"
-            class="github-icon"
-            target="_blank"
-            aria-label="Voir le projet sur GitHub">
+          <a href="https://github.com/Rayaneww/Projet-correcteur-automatique-d-erreurs" class="github-icon" target="_blank" aria-label="Voir le projet sur GitHub">
             <img src="images/Octicons-mark-github.svg" alt="">
           </a>
         </li>
@@ -164,8 +245,8 @@
           <h3>Projet 3 - Site CNAM</h3>
           <p>Suite à la sortie au CNAM, nous avons créé un blog responsive et élégant inspiré de la joueuse de tympanon au CNAM, alliant design culturel et expérience utilisateur optimisée.</p>
           
-          <!-- Lien visible -->
-          <a href="https://tonlien.com" target="_blank" rel="noopener noreferrer" class="btn-link">Voir le site</a>
+          <!-- Lien visible --> 
+          <a href="http://btsio.org/2025/watteeuwr/La-joueuse-de-tympanon/index.html" target="_blank" rel="noopener noreferrer" class="btn-link">Voir le site</a>
           <br>
           <br>
           <!-- Lien GitHub -->
@@ -178,6 +259,10 @@
         </li>
 
         <!-- Ajoute d’autres projets ici -->
+         <li class="carousel-slide">
+          <img src="images/flask.png" alt="Projet 3" />
+          <h3>Projet 4 - Projet Flask</h3>
+          <p>Lors de ma première année de bts j'ai realiser un projet web. Lors de ce projet j'ai utliser le language python et une bibliotheque: flask. Ce Projet a pour but d'etre un site lier a une bases de donnée.</p>
       </ul>
     </div>
     
@@ -187,16 +272,23 @@
 
 </section>
 
+<section id="veille" class="alt fade-in-section">
+  <div class="container">
+      <h2>Veille technologique</h2>
+        <p>Quantique</p>
+        <p>bio-informatique</p>
+      </div>
+
+</section>
+
 <div class="contact-bubble" tabindex="0" aria-label="Bulle de contact">
-  <div class="contact-icon">✉️</div>
+  <div class="contact-icon">
+    ✉️ <span class="contact-label"> &nbsp;&nbsp;&nbsp;Mes reseaux</span>
+  </div>
   <div class="contact-details">
-    <p>Me contacter</p>
     <div class="social-links">
-      <a href="mailto:ton.email@example.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
-        <img src="images/email-icon.svg" alt="Email" />
-      </a>
-      <a href="https://linkedin.com/in/tonprofil" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <img src="images/LinkedIn_icon.svg" alt="LinkedIn" />
+      <a href="https://www.linkedin.com/in/rayane-watteeuw-4527b4306/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <img src="images/LinkedIn_icon.png" alt="LinkedIn" />
       </a>
       <a href="https://github.com/tonprofil" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <img src="images/Octicons-mark-github.svg" alt="GitHub" />
@@ -206,11 +298,11 @@
 </div>
 
 
-
-
   <footer id="contact" class="container fade-in-section">
     <p>© 2025 Rayane Watteeuw. Tous droits réservés.</p>
   </footer>
+
+
 </body>
 <script>
   const observer = new IntersectionObserver(entries => {
@@ -333,6 +425,31 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+  // Flip animation pour les boutons langues
+  document.querySelectorAll('.language-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+      btn.classList.toggle('flipped');
+    });
+  });
+</script>
+<script>
+  // Menu hamburger
+  const hamburger = document.querySelector('.hamburger');
+  const mainNav = document.getElementById('main-nav');
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    mainNav.classList.toggle('open');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+  // Fermer le menu au clic sur un lien
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mainNav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
 </script>
 
 </html>
