@@ -1036,6 +1036,31 @@ p {
     height: 200px;
   }
 
+  /* Timeline sur tablette/mobile */
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 60px !important;
+    padding-right: 15px !important;
+    text-align: left !important;
+  }
+
+  .timeline-marker {
+    left: 10px;
+  }
+
+  .timeline-content {
+    width: 100%;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1054,17 +1079,25 @@ p {
     left: 20px;
   }
 
-  .timeline-item {
-    padding-left: 60px !important;
-    text-align: left !important;
-  }
-
+  .timeline-item,
+  .timeline-item:nth-child(odd),
   .timeline-item:nth-child(even) {
     padding-left: 60px !important;
+    padding-right: 10px !important;
+    text-align: left !important;
   }
 
   .timeline-marker {
     left: 5px;
+  }
+
+  .timeline-content {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
   }
 
   .section {
