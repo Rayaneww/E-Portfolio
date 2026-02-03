@@ -4,455 +4,552 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rayane Watteeuw - Portfolio</title>
-  <link rel="stylesheet" href="style/style2.css" />
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style/modern.css" />
+  <link rel="icon" type="image/png" href="images/logo2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="logo">RW</div>
+  <header class="navbar">
+    <div class="navbar-container">
+      <nav id="main-nav" class="nav-menu">
+        <a href="#" class="logo">RW</a>
+        <div class="nav-links">
+          <a href="#profil" class="nav-link active">Profil</a>
+          <a href="#formations" class="nav-link">Formations</a>        
+          <a href="#stages" class="nav-link">Stages</a>
+          <a href="#competences" class="nav-link">Compétences</a>
+          <a href="#projets" class="nav-link">Projets</a>
+          <a href="#veille" class="nav-link">Veille</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <div class="nav-indicator"></div>
+        </div>
+      </nav>
       <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <nav id="main-nav">
-        <a href="#profil">Profil</a>
-        <a href="#formations">Formations</a>        
-        <a href="#Stages">Stages</a>
-        <a href="#competences">Compétences</a>
-        <a href="#Projets">Projet</a>
-        <a href="#veille">Veille technologique</a>
-      </nav>
     </div>
   </header>
 
   <section class="hero">
-    <div class="container hero-content">
-      <div class="text">
-        <h1 class="typing">Je suis <span>Rayane Watteeuw</span></h1>
-        <p>Étudiant en BTS SIO (Services Informatiques aux Organisations)</p>
-        <a href="images/Rayane Watteeuw (1).pdf" class="btn" download="">Télécharger mon CV</a>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title"><span class="highlight">Rayane Watteeuw</span></h1>
+          <p class="hero-subtitle">Développeur Full Stack & Étudiant BTS SIO</p>
+          <p class="hero-description">Passionné par la création d'expériences web innovantes et performantes</p>
+          <div class="hero-buttons">
+            <a href="images/Rayane Watteeuw (1).pdf" class="btn btn-primary" download="">
+              <span>Télécharger CV</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+            <a href="#projets" class="btn btn-secondary">
+              <span>Voir mes projets</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-container">
+            <img src="images/photo.jpg" alt="Rayane Watteeuw" class="profile-image"/>
+            <div class="image-glow"></div>
+          </div>
+        </div>
       </div>
-      <div class="image">
-        <img src="images/photo.jpg" alt="Rayane Watteeuw" />
+      <div class="scroll-indicator">
+        <div class="scroll-dot"></div>
       </div>
     </div>
   </section>
 
-  <section id="profil" class="alt fade-in-section">
+  <section id="profil" class="section section-light">
     <div class="container">
-      <h2>Profil</h2>
-      <p>
-      Passionné par l'informatique, je mets mes compétences et ma créativité au service de projets numériques innovants et sur mesure. Mon objectif est de créer des expériences utilisateur fluides et performantes, tout en respectant les standards de qualité et d'accessibilité. Fort d'une solide maîtrise des technologies actuelles, je suis en perpétuelle veille afin de rester à la pointe des dernières évolutions du secteur.
-      </p>
-      <p>
-          En dehors du code, je suis passionné par la musique , le sport et l'e-sport. Ces passions me permettent de nourrir ma créativité et d'explorer de nouvelles façons de concevoir des interfaces et des expériences utilisateurs.
-      </p>
+      <h2 class="section-title">À Propos</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Passion pour l'innovation</h3>
+          <p>Passionné par l'informatique, je mets mes compétences et ma créativité au service de projets numériques innovants et sur mesure. Mon objectif est de créer des expériences utilisateur fluides et performantes.</p>
+        </div>
+        <div class="about-card">
+          <h3>Veille technologique</h3>
+          <p>Je suis en perpétuelle veille afin de rester à la pointe des dernières évolutions du secteur. Cela me permet de développer des solutions modernes et efficaces.</p>
+        </div>
+        <div class="about-card">
+          <h3>Créativité & Passions</h3>
+          <p>En dehors du code, je suis passionné par la musique, le sport et l'e-sport. Ces passions me permettent de nourrir ma créativité et d'explorer de nouvelles façons de concevoir.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-
-  <section id="formations" class="fade-in-section">
-     <div class="container">
-      <h2>Formations</h2>
-      <ul>
-        <li><strong>2024/25 :</strong> BTS SIO – Cybersécurité (SLAM) – Lycée René Descartes (77420)</li>
-        <p>Actuellement j'entame un BTS SIO (Service Informatique aux Organisations), plus précisément dans l'option SLAM. Cela signifie que l'option se concentre sur le développement de logiciels et d'applications pour les entreprises. On apprend à concevoir des solutions informatiques adaptées aux besoins des organisations, en développant des applications, des sites web et des logiciels sur mesure. L'option SLAM me permet d'approfondir mes compétences en programmation et en gestion de projets informatiques.</p>
-
-        <li><strong>2023/24 :</strong> L1 Informatique – CNAM (75003)</li>
-        <p>En licences j'ai appris les bases de l'informatique : programmation, algorithmique, systèmes d’exploitation, etc. L'objectif était de construire des fondations solides pour poursuivre mes études, vers des spécialisations dans des domaines comme le développement, la cybersécurité ou l'intelligence artificielle.</p>
-        <li><strong>2022/23 :</strong> Baccalauréat Spécialité Mathématiques/SVT au Lycée Samuel Beckett (77260) avec mention Assez bien</p>
-        <p>J'ai obtenu mon baccalauréat avec une spécialisation en mathématiques et en sciences de la vie et de la terre (SVT). Je me suis concentré sur des matières scientifiques, ce qui m'a permis de développer un raisonnement logique et une capacité à analyser des problèmes complexes. J'ai donc finalement obtenu mon Baccalauréat avec une mention assez bien.</p>
-
-        <li><strong>2022 :</strong> Certification PIX – Lycée Samuel Beckett</li>
-        <p>Enfin, j'ai aussi passé la certification PIX, qui est une évaluation de mes compétences numériques. PIX évalue les niveaux dans des domaines comme l’utilisation d’outils numériques, la recherche d’informations, la communication en ligne, et la protection de la vie privée. C’est un certificat utile dans le monde professionnel, car il prouve que nous maîtrisons les bases des technologies numériques.</p>
-      </ul>
-    </div>
-  </section>
-
-  <section id="Stages" class=" alt fade-in-section">
+  <section id="formations" class="section section-dark">
     <div class="container">
-      <h2>Stages</h2>
-      <ul>
-        <li><strong>Première année :</strong>J’ai effectué mon stage de première année au sein de l’entreprise Loiselet & Daigremont, spécialisée dans la gestion immobilière, où j’ai été intégré à la section informatique. Loiselet & Daigremont est une société anonyme au capital de 3 000 000 euros. Son siege est au 35 ter, avenue André Morizet - 92100 Boulogne.Son directeur general est Philippe Loiselet et mon tuteur de stage est Christophe Rousseau. </li>
-        <br>
-        <li><strong>Deuxième année :</strong> ...</li>
-      </ul>
-  </div>
-  </section>
-
-<section id="competences" class="alt fade-in-section">
-  <div class="container">
-    <h2>Compétences</h2>
-
-    <div class="skills-grid">
-      <!-- HTML -->
-      <button class="skill-btn"
-              data-desc="HTML (HyperText Markup Language) structure le contenu d’une page web : paragraphes, listes, images, tableaux, etc.">
-        <img src="images/html.png" alt="HTML" class="skill-icon" />
-        <div class="progress-container">
-          <div class="progress-bar" style="width: 65%;">65%</div>
+      <h2 class="section-title">Formations</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>2024-2026 - BTS SIO (SLAM)</h3>
+            <p class="timeline-school">Lycée René Descartes, Boulogne-sur-Seine</p>
+            <p>Spécialisation en cybersécurité avec focus sur le développement d'applications. Apprentissage des solutions informatiques adaptées aux besoins des organisations, architecture MVC, sécurité et gestion de projets informatiques.</p>
+          </div>
         </div>
-        HTML
-      </button>
 
-      <!-- Java -->
-      <button class="skill-btn"
-              data-desc="Java est un langage orienté objet, portable grâce à la JVM ; il sert au développement d’applications web, Android et solutions d’entreprise.">
-        <img src="images/java.png" alt="Java" class="skill-icon" />
-        <div class="progress-container">
-          <div class="progress-bar" style="width: 80%;">80%</div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>2023-2024 - L1 Informatique</h3>
+            <p class="timeline-school">CNAM, Paris</p>
+            <p>Fondamentaux de l'informatique : programmation, algorithmique, systèmes d'exploitation. Construction des bases solides pour poursuivre vers des spécialisations en développement, cybersécurité et intelligence artificielle.</p>
+          </div>
         </div>
-        Java
-      </button>
 
-      <!-- PHP -->
-      <button class="skill-btn"
-              data-desc="PHP 8.x, langage côté serveur : architecture MVC, requêtes préparées (PDO) et bonnes pratiques sécurité pour le back-end web.">
-        <img src="images/php.png" alt="PHP" class="skill-icon" />
-        <div class="progress-container">
-          <div class="progress-bar" style="width: 75%;">75%</div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>2022-2023 - Baccalauréat Scientifique</h3>
+            <p class="timeline-school">Lycée Samuel Beckett, Fontainebleau</p>
+            <p>Spécialisation en Mathématiques et SVT. Mention Assez Bien. Développement du raisonnement logique et analyse de problèmes complexes.</p>
+          </div>
         </div>
-        PHP
-      </button>
 
-      <!-- Visual Studio Code -->
-      <button class="skill-btn"
-              data-desc="Visual Studio Code : éditeur extensible avec débogage, IntelliSense, snippets, refactorisation et Git intégré.">
-        <img src="images/vs.png" alt="Visual Studio Code" class="skill-icon" />
-        <div class="progress-container">
-          <div class="progress-bar" style="width: 80%;">80%</div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>2022 - Certification PIX</h3>
+            <p class="timeline-school">Lycée Samuel Beckett</p>
+            <p>Évaluation officielle des compétences numériques : utilisation d'outils numériques, recherche d'informations, communication en ligne et protection de la vie privée.</p>
+          </div>
         </div>
-        Visual Studio Code
-      </button>
-
-      <!-- DrJava -->
-      <button class="skill-btn"
-              data-desc="DrJava : IDE léger destiné à l’apprentissage, permet d’écrire, compiler et exécuter du Java rapidement (projet de licence).">
-        <img src="images/dr_java.png" alt="DrJava" class="skill-icon" />
-        <div class="progress-container">
-          <div class="progress-bar" style="width: 65%;">65%</div>
-        </div>
-        DrJava
-      </button>
-
-      <!-- Eclipse -->
-      <button class="skill-btn"
-              data-desc="Eclipse : IDE Java complet avec gestion de projets multi-modules, Maven/Gradle, plugins qualité (Checkstyle, SonarLint).">
-        <img src="images/eclipse.png" alt="Eclipse" class="skill-icon" />
-        <div class="progress-container">
-          <div class="progress-bar" style="width: 90%;">80%</div>
-        </div>
-        Eclipse
-      </button>
-    </div>
-
-    <div class="skill-desc" id="skill-description"></div>
-  
-    <h2>Soft skills</h2>
-    <div class="skills-grid">
-      <div class="soft-skill-card">
-        <img src="images/esprit.jpg" alt="Esprit d'équipe" class="skill-icon" />
-        Esprit d'équipe
       </div>
-      <div class="soft-skill-card">
-        <img src="images/creativite.png.png" alt="Créativité" class="skill-icon" />
-        Créativité
-      </div>
-      <div class="soft-skill-card">
-        <img src="images/comm.png" alt="Communication" class="skill-icon" />
-        Communication
-      </div>
-      <div class="soft-skill-card">
-        <img src="images/ada.png" alt="Adaptabilité" class="skill-icon" />
-        Adaptabilité
-      </div>
-    </div>
-        
-    <br>
-    <h2>Langues</h2>
-    <div class="skills-grid">
-      <button class="language-btn" data-level="Natif">
-        <div class="language-card">
-          <div class="language-front">
-            <img src="images/france.png" alt="Français" class="skill-icon" />
-            Français
-          </div>
-          <div class="language-back">
-            <div style="font-size: 1.5em; margin-bottom: 10px;">🇫🇷</div>
-            <div style="font-size: 0.9em;">Niveau: Natif</div>
-          </div>
-        </div>
-      </button>
-            <button class="language-btn" data-level="Natif">
-        <div class="language-card">
-          <div class="language-front">
-            <img src="images/uk.png" alt="Français" class="skill-icon" />
-            Anglais
-          </div>
-          <div class="language-back">
-            <div style="font-size: 1.5em; margin-bottom: 10px;">🇫🇷</div>
-            <div style="font-size: 0.9em;">Niveau: Natif</div>
-          </div>
-        </div>
-      </button>
-            <button class="language-btn" data-level="Natif">
-        <div class="language-card">
-          <div class="language-front">
-            <img src="images/allemagne.png" alt="Français" class="skill-icon" />
-            Allemand
-          </div>
-          <div class="language-back">
-            <div style="font-size: 1.5em; margin-bottom: 10px;">🇫🇷</div>
-            <div style="font-size: 0.9em;">Niveau: Natif</div>
-          </div>
-        </div>
-      </button>
     </div>
   </section>
 
+  <section id="stages" class="section section-light">
+    <div class="container">
+      <h2 class="section-title">Expériences Professionnelles</h2>
+      <div class="experience-grid">
+        <div class="experience-card">
+          <div class="experience-header">
+            <h3>Stage - Première Année</h3>
+            <span class="experience-date">2024-2025</span>
+          </div>
+          <h4>Loiselet & Daigremont</h4>
+          <p class="company-desc">Spécialiste en gestion immobilière</p>
+          <p>J'ai effectué mon stage au sein de la section informatique, où j'ai pu contribuer à des projets de gestion immobilière. Expérience enrichissante dans un environnement professionnel structuré.</p>
+          <div class="company-info">
+            <p><strong>Tuteur :</strong> Christophe Rousseau</p>
+            <p><strong>Adresse :</strong> 35 ter, avenue André Morizet - 92100 Boulogne</p>
+          </div>
+        </div>
 
-<section id="Projets">
-<div class="container">
-  <h2>Projets</h2>
-  <div class="carousel">
-    <button class="carousel-btn prev">&lt;</button>
-    
-    <div class="carousel-track-container">
-      <ul class="carousel-track">
-        <li class="carousel-slide current-slide">
-          <img src="images/projet1.jpg" alt="Projet 1" />
-          <h3>Projet 1 - Mon Projet en Licence d'informatique</h3>
-          <p>Développement d’une application console en Java pour gérer un système d’adhérents avec gestion dynamique des adhésions selon la date, incluant affichage, ajout, renouvellement et validation des statuts.</p>
-          <a href="https://github.com/Rayaneww/Projet-L1" class="github-icon" target="_blank" aria-label="Voir le projet sur GitHub">
-            <img src="images/Octicons-mark-github.svg" alt="GitHub logo" />
-          </a>
-        </li>
-        <li class="carousel-slide">
-          <img src="images/erreur.png" alt="Projet 2" />
-          <h3>Projet 2 - Projet correcteur automatique d'erreurs</h3>
-          <p>Ce projet permet de corriger automatiquement une erreur. Cela sous la forme d'un jeu qui est-ce ?</p>
-          <a href="http://btsio.org/2025/watteeuwr/Qui-est-ce/Qui-est-ce.php" target="_blank" rel="noopener noreferrer" class="btn-link">Voir le site</a>
-          <br>
-          <br>
-          <a href="https://github.com/Rayaneww/Projet-correcteur-automatique-d-erreurs" class="github-icon" target="_blank" aria-label="Voir le projet sur GitHub">
-            <img src="images/Octicons-mark-github.svg" alt="">
-          </a>
-        </li>
-        <li class="carousel-slide">
-          <img src="images/cnam.png" alt="Projet 3" />
-          <h3>Projet 3 - Site CNAM</h3>
-          <p>Suite à la sortie au CNAM, nous avons créé un blog responsive et élégant inspiré de la joueuse de tympanon au CNAM, alliant design culturel et expérience utilisateur optimisée.</p>
-          
-          <!-- Lien visible --> 
-          <a href="http://btsio.org/2025/watteeuwr/La-joueuse-de-tympanon/index.html" target="_blank" rel="noopener noreferrer" class="btn-link">Voir le site</a>
-          <br>
-          <br>
-          <!-- Lien GitHub -->
-          <a href="https://github.com/Rayaneww/CNAM-PROJET"
-            class="github-icon"
-            target="_blank"
-            aria-label="Voir le projet sur GitHub">
-            <img src="images/Octicons-mark-github.svg" alt="GitHub">
-          </a>
-        </li>
-
-        <!-- Ajoute d’autres projets ici -->
-         <li class="carousel-slide">
-          <img src="images/flask.png" alt="Projet 3" />
-          <h3>Projet 4 - Projet Flask</h3>
-          <p>Lors de ma première année de bts j'ai realiser un projet web. Lors de ce projet j'ai utliser le language python et une bibliotheque: flask. Ce Projet a pour but d'etre un site lier a une bases de donnée.</p>
-      </ul>
-    </div>
-    
-    <button class="carousel-btn next">&gt;</button>
-  </div>
-</div>
-
-</section>
-
-<section id="veille" class="alt fade-in-section">
-  <div class="container">
-      <h2>Veille technologique</h2>
-        <h3>Bio-Informatique</h3>
-        <p>Je fais une veille technologique, c’est-à-dire que je me tiens régulièrement informé des dernières innovations et actualités dans un domaine précis. Cela me permet de rester à jour et de comprendre l’évolution des technologies. </p>
-        <p>J’ai choisi de faire ma veille en bio-informatique, car c’est un domaine qui combine bases de données, analyse de données et Big Data, et qui est en pleine expansion dans la santé et la recherche scientifique. Cette veille m’aide à découvrir de nouveaux outils, méthodes et tendances, et à mieux comprendre comment les technologies sont appliquées à la biologie et à la médecine.</p>
-        <a href="https://www.pearltrees.com/rayaneww/veille-technologique/id93045913" target="_blank" rel="noopener noreferrer" class="btn-link">Voir mon Pearltrees</a>
-        <br>
+        <div class="experience-card">
+          <div class="experience-header">
+            <h3>Stage - Deuxième Année</h3>
+            <span class="experience-date">À venir</span>
+          </div>
+          <p class="placeholder">À confirmer pour l'année 2025-2026</p>
+        </div>
       </div>
-
-</section>
-
-<div class="contact-bubble" tabindex="0" aria-label="Bulle de contact">
-  <div class="contact-icon">
-    ✉️ <span class="contact-label"> &nbsp;&nbsp;&nbsp;Mes reseaux</span>
-  </div>
-  <div class="contact-details">
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/rayane-watteeuw-4527b4306/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <img src="images/LinkedIn_icon.png" alt="LinkedIn" />
-      </a>
-      <a href="https://github.com/tonprofil" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <img src="images/Octicons-mark-github.svg" alt="GitHub" />
-      </a>
     </div>
-  </div>
-</div>
+  </section>
 
+  <section id="competences" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Compétences Techniques</h2>
+      
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Langages de Programmation</h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <img src="images/html.png" alt="HTML" class="skill-icon" />
+              <h4>HTML5</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 85%"></div>
+              </div>
+              <span class="skill-level">85%</span>
+            </div>
 
-  <footer id="contact" class="container fade-in-section">
-    <p>© 2025 Rayane Watteeuw. Tous droits réservés.</p>
+            <div class="skill-card">
+              <img src="images/java.png" alt="Java" class="skill-icon" />
+              <h4>Java</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 80%"></div>
+              </div>
+              <span class="skill-level">80%</span>
+            </div>
+
+            <div class="skill-card">
+              <img src="images/php.png" alt="PHP" class="skill-icon" />
+              <h4>PHP 8.x</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 75%"></div>
+              </div>
+              <span class="skill-level">75%</span>
+            </div>
+
+            <div class="skill-card">
+              <img src="images/js.png" alt="JavaScript" class="skill-icon" />
+              <h4>JavaScript</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 78%"></div>
+              </div>
+              <span class="skill-level">78%</span>
+            </div>
+
+            <div class="skill-card">
+              <img src="images/css3.png" alt="CSS3" class="skill-icon" />
+              <h4>CSS3</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 82%"></div>
+              </div>
+              <span class="skill-level">82%</span>
+            </div>
+
+            <div class="skill-card">
+              <img src="images/python.png" alt="Python" class="skill-icon" />
+              <h4>Python</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 70%"></div>
+              </div>
+              <span class="skill-level">70%</span>
+            </div>
+
+            <div class="skill-card">
+              <img src="images/laravel.png" alt="Laravel" class="skill-icon" />
+              <h4>Laravel</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 65%"></div>
+              </div>
+              <span class="skill-level">65%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Outils & IDEs</h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <img src="images/vs.png" alt="VS Code" class="skill-icon" />
+              <h4>Visual Studio Code</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 90%"></div>
+              </div>
+              <span class="skill-level">90%</span>
+            </div>
+
+            <div class="skill-card">
+              <img src="images/eclipse.png" alt="Eclipse" class="skill-icon" />
+              <h4>Eclipse IDE</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 85%"></div>
+              </div>
+              <span class="skill-level">85%</span>
+            </div>
+
+            <div class="skill-card">
+              <img src="images/dr_java.png" alt="DrJava" class="skill-icon" />
+              <h4>DrJava</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 75%"></div>
+              </div>
+              <span class="skill-level">75%</span>
+            </div>
+
+            <div class="skill-card">
+              <img src="images/git.png" alt="Git & GitHub" class="skill-icon" />
+              <h4>Git & GitHub</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 88%"></div>
+              </div>
+              <span class="skill-level">88%</span>
+            </div>
+
+            <div class="skill-card">
+              <img src="images/mysql.png" alt="MySQL" class="skill-icon" />
+              <h4>MySQL</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 80%"></div>
+              </div>
+              <span class="skill-level">80%</span>
+            </div>
+
+            <div class="skill-card">
+              <img src="images/figma.png" alt="Figma" class="skill-icon" />
+              <h4>Figma</h4>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 72%"></div>
+              </div>
+              <span class="skill-level">72%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Soft Skills</h3>
+          <div class="soft-skills-grid">
+            <div class="soft-skill">
+              <span class="skill-badge">Esprit d'équipe</span>
+            </div>
+            <div class="soft-skill">
+              <span class="skill-badge">Créativité</span>
+            </div>
+            <div class="soft-skill">
+              <span class="skill-badge">Communication</span>
+            </div>
+            <div class="soft-skill">
+              <span class="skill-badge">Adaptabilité</span>
+            </div>
+            <div class="soft-skill">
+              <span class="skill-badge">Résolution de problèmes</span>
+            </div>
+            <div class="soft-skill">
+              <span class="skill-badge">Leadership</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Langues</h3>
+          <div class="languages-grid">
+            <div class="language-card">
+              <h4><img src="images/france.png" alt="France" class="flag-icon" /> Français</h4>
+              <p>Natif</p>
+            </div>
+            <div class="language-card">
+              <h4><img src="images/uk.png" alt="UK" class="flag-icon" /> Anglais</h4>
+              <p>Intermédiaire</p>
+            </div>
+            <div class="language-card">
+              <h4><img src="images/allemagne.png" alt="Allemagne" class="flag-icon" /> Allemand</h4>
+              <p>Basique</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projets" class="section section-light">
+    <div class="container">
+      <h2 class="section-title">Mes Projets</h2>
+      
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/projet1.jpg" alt="Projet L1 - Gestion d'adhérents" />
+          </div>
+          <div class="project-content">
+            <span class="project-year">2023-2024</span>
+            <h3>Gestion d'Adhérents en Java</h3>
+            <p>Application console Java pour gérer un système d'adhérents avec gestion dynamique des adhésions.</p>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">POO</span>
+              <span class="tag">Console</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rayaneww/Projet-L1" target="_blank" class="project-link github">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/erreur.png" alt="Correcteur Automatique" />
+          </div>
+          <div class="project-content">
+            <span class="project-year">2025</span>
+            <h3>Qui est-ce ? Correcteur Automatique</h3>
+            <p>Application web interactive de correction automatique d'erreurs sous forme de jeu.</p>
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Interactive</span>
+            </div>
+            <div class="project-links">
+              <a href="http://btsio.org/2025/watteeuwr/Qui-est-ce/Qui-est-ce.php" target="_blank" class="project-link site">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                </svg>
+                Voir le site
+              </a>
+              <a href="https://github.com/Rayaneww/Projet-correcteur-automatique-d-erreurs" target="_blank" class="project-link github">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/loda.png" alt="Projet Loiselet & Daigremont" class="zoom-out-load" />
+          </div>
+          <div class="project-content">
+            <span class="project-year">2025</span>
+            <h3>Projet de Stage Loiselet & Daigremont 1er Année</h3>
+            <p>Projet de gestion de fournisseur en CRUD</p>
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">Mysql</span>
+              <span class="tag">CRUD</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rayaneww/Projet-Stage" target="_blank" class="project-link github">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/CVVEN.png" alt="Projet CVVEN" />
+          </div>
+          <div class="project-content">
+            <span class="project-year">2025-2026</span>
+            <h3>Application Web CVVEN</h3>
+            <p>Projet web développé avec Code Igniter, connecté à une base de données. Gestion d'hôtel.</p>
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Code Igniter</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Alpine</span>
+            </div>
+            <div class="project-links">
+              <a href="#" target="_blank" class="project-link site">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                </svg>
+                Voir le site
+              </a>
+              <a href="https://github.com/MaelysLeBrun/CVVEN" target="_blank" class="project-link github">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/LoDaStock.png" alt="Projet Loiselet & Daigremont " />
+          </div>
+          <div class="project-content">
+            <span class="project-year">2025</span>
+            <h3>Projet de LoDaStock</h3>
+            <p>Projet de gestion de Stock suite du projet de gestion de fournisseur en CRUD. Projet de stage de Deuxième année</p>
+            <div class="project-tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">Sqlite</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Alpine</span>
+              <span class="tag">MVC</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rayaneww" target="_blank" class="project-link github">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="veille" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Veille Technologique</h2>
+      <div class="veille-content">
+        <div class="veille-card">
+          <div class="veille-icon">🧬</div>
+          <h3>Bio-Informatique</h3>
+          <p>Je fais une veille technologique active pour rester informé des dernières innovations dans un domaine précis. Cette veille me permet de comprendre l'évolution des technologies et leurs applications pratiques.</p>
+          <p>J'ai choisi la bio-informatique car c'est un domaine qui combine bases de données, analyse de données et Big Data, en pleine expansion dans la santé et la recherche scientifique.</p>
+          <a href="https://www.pearltrees.com/rayaneww/veille-technologique/id93045913" target="_blank" class="btn btn-secondary">
+            <span>Consulter mon Pearltrees</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
+              <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section  id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Restons en Contact</h2>
+      <div class="contact-grid">
+        <a href="https://www.linkedin.com/in/rayane-watteeuw-4527b4306/" target="_blank" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.006 1.419-.103.249-.129.597-.129.946v5.44h-3.553s.047-8.842 0-9.758h3.553v1.381c.43-.664 1.199-1.608 2.948-1.608 2.153 0 3.767 1.407 3.767 4.432v5.553z M5.337 9.433c-1.144 0-1.915-.761-1.915-1.713 0-.951.77-1.713 1.96-1.713 1.188 0 1.915.762 1.932 1.713 0 .952-.744 1.713-1.977 1.713zm1.581 11.019H3.719V9.694h3.199v10.758zM22.094 0H1.906C.851 0 0 .851 0 1.906v20.188C0 23.149.851 24 1.906 24h20.188c1.055 0 1.906-.851 1.906-1.906V1.906C24 .851 23.149 0 22.094 0z"/>
+          </svg>
+          <h3>LinkedIn</h3>
+          <p>Connectez-vous avec moi</p>
+        </a>
+
+        <a href="https://github.com/Rayaneww" target="_blank" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <h3>GitHub</h3>
+          <p>Explorez mes projets</p>
+        </a>
+
+        <a href="mailto:rayane.watteeuw@gmail.com" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <h3>Email</h3>
+          <p>Me contacter</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Rayane Watteeuw. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="#profil">Profil</a>
+        <a href="#formations">Formations</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+      </div>
+    </div>
   </footer>
 
-
+  <script src="js/main.js"></script>
 </body>
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('.fade-in-section').forEach(section => {
-    observer.observe(section);
-  });
-</script>
-<script>
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll("nav a");
-
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      if (pageYOffset >= sectionTop) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href").includes(current)) {
-        link.classList.add("active");
-      }
-    });
-  });
-</script>
-<script>
-  const buttons = document.querySelectorAll('.skill-btn');
-  const descBox = document.getElementById('skill-description');
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Si ce bouton est déjà actif, on cache la description
-      if (btn.classList.contains('active')) {
-        btn.classList.remove('active');
-        descBox.classList.remove('visible');
-        descBox.textContent = '';
-        return;
-      }
-
-      // Sinon on désactive tous les boutons
-      buttons.forEach(b => b.classList.remove('active'));
-
-      // On active ce bouton
-      btn.classList.add('active');
-
-      // Affiche la description du bouton cliqué
-      descBox.textContent = btn.dataset.desc;
-      descBox.classList.add('visible');
-
-      // Scroll vers la description si besoin
-      descBox.scrollIntoView({behavior: 'smooth', block: 'center'});
-    });
-  });
-</script>
-<script>
-  const track = document.querySelector('.carousel-track');
-  const slides = document.querySelectorAll('.carousel-slide');
-  const slideWidth = slides[0].offsetWidth + 20; // marge incluse
-  let currentIndex = 0;
-
-  function updateCarousel() {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === currentIndex);
-    });
-
-    // centrer la slide active
-    const offset = (track.offsetWidth - slideWidth) / 2;
-    track.style.transform = `translateX(${-currentIndex * slideWidth + offset}px)`;
-  }
-
-  document.querySelector('.carousel-btn.next').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateCarousel();
-  });
-
-  document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateCarousel();
-  });
-
-  window.addEventListener('resize', updateCarousel);
-  updateCarousel(); // init
-</script>
-
-<script>
-  // Fichier : contact-bubble.js
-
-document.addEventListener('DOMContentLoaded', () => {
-  const bubble = document.querySelector('.contact-bubble');
-
-  // Fermer la bulle si clic en dehors
-  document.addEventListener('click', (e) => {
-    if (!bubble.contains(e.target)) {
-      bubble.classList.remove('active');
-    }
-  });
-
-  // Toggle active sur clic
-  bubble.addEventListener('click', () => {
-    bubble.classList.toggle('active');
-  });
-
-  // Gérer ouverture au focus clavier (tab)
-  bubble.addEventListener('focus', () => {
-    bubble.classList.add('active');
-  });
-  bubble.addEventListener('blur', () => {
-    bubble.classList.remove('active');
-  });
-});
-
-  // Flip animation pour les boutons langues
-  document.querySelectorAll('.language-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-      btn.classList.toggle('flipped');
-    });
-  });
-</script>
-<script>
-  // Menu hamburger
-  const hamburger = document.querySelector('.hamburger');
-  const mainNav = document.getElementById('main-nav');
-  hamburger.addEventListener('click', function() {
-    hamburger.classList.toggle('active');
-    mainNav.classList.toggle('open');
-    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-    hamburger.setAttribute('aria-expanded', !expanded);
-  });
-  // Fermer le menu au clic sur un lien
-  mainNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      mainNav.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
-
 </html>
