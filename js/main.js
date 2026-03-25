@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburger();
   initCarousel();
   initScrollAnimations();
+  initRssModal();
 });
 
 // ===== NAV INDICATOR =====
@@ -284,7 +285,90 @@ function initScrollAnimations() {
     });
   }, observerOptions);
 
-  document.querySelector('#competences')?.forEach(el => skillObserver.observe(el));
+  document.querySelectorAll('#competences').forEach(el => skillObserver.observe(el));
+}
+
+// ===== RSS MODAL =====
+function initRssModal() {
+  initRssModalInstance({
+    btnId:      'rss-btn',
+    modalId:    'rss-modal',
+    containerId:'rss-articles',
+    rssUrl:     'https://news.google.com/rss/search?q=bioinformatique+OR+bioinformatics&hl=fr&gl=FR&ceid=FR:fr'
+  });
+
+  initRssModalInstance({
+    btnId:      'rss-btn-claude',
+    modalId:    'rss-modal-claude',
+    containerId:'rss-articles-claude',
+    rssUrl:     'https://news.google.com/rss/search?q=Claude+Code+Anthropic+IA+développement&hl=fr&gl=FR&ceid=FR:fr'
+  });
+}
+
+function initRssModalInstance({ btnId, modalId, containerId, rssUrl }) {
+  const btn      = document.getElementById(btnId);
+  const modal    = document.getElementById(modalId);
+  const closeBtn = modal?.querySelector('.rss-modal-close');
+
+  if (!btn || !modal || !closeBtn) return;
+
+  const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&count=10`;
+  let loaded = false;
+
+  btn.addEventListener('click', () => {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (!loaded) loadArticles();
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function loadArticles() {
+    const container = document.getElementById(containerId);
+
+    fetch(API_URL)
+      .then(res => {
+        if (!res.ok) throw new Error('network');
+        return res.json();
+      })
+      .then(data => {
+        if (data.status !== 'ok' || !data.items || !data.items.length) {
+          throw new Error('no items');
+        }
+        loaded = true;
+        container.innerHTML = data.items.map(item => {
+          const date = item.pubDate
+            ? new Date(item.pubDate).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
+            : '';
+          const desc = item.description
+            ? item.description.replace(/<[^>]*>/g, '').trim().slice(0, 160) + '…'
+            : '';
+          return `
+            <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="rss-article">
+              <div class="rss-article-content">
+                <h4>${item.title}</h4>
+                ${desc ? `<p>${desc}</p>` : ''}
+                ${date ? `<span class="rss-article-date">${date}</span>` : ''}
+              </div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="16" height="16" class="rss-arrow" aria-hidden="true">
+                <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+              </svg>
+            </a>`;
+        }).join('');
+      })
+      .catch(() => {
+        container.innerHTML = '<p class="rss-error">Impossible de charger les articles pour le moment.</p>';
+      });
+  }
 }
 
 // ===== UTILITY FUNCTIONS =====
