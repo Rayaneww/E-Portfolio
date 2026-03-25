@@ -467,6 +467,30 @@ p {
   margin-bottom: 10px;
 }
 
+.timeline-item--future .timeline-marker {
+  background: var(--accent-color);
+  border-color: var(--dark-bg);
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.25);
+}
+
+.timeline-item--future .timeline-content {
+  border-color: rgba(245, 158, 11, 0.35);
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.timeline-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-color), #f97316);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 /* ===== EXPERIENCE SECTION ===== */
 .experience-grid {
   display: grid;
