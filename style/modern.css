@@ -1,8 +1,8 @@
 /* modern.css - Modern & Contemporary Portfolio Design */
 
 :root {
-  --primary-color: #6366f1;
-  --secondary-color: #ec4899;
+  --primary-color: #2563eb;
+  --secondary-color: #0891b2;
   --accent-color: #f59e0b;
   --dark-bg: #0f172a;
   --light-bg: #f8fafc;
@@ -476,6 +476,16 @@ p {
 .timeline-item--future .timeline-content {
   border-color: rgba(245, 158, 11, 0.35);
   background: rgba(245, 158, 11, 0.06);
+}
+
+.alternance-tag {
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-top: -18px;
+}
+
+.alternance-tag--timeline {
+  margin-top: 12px;
 }
 
 .timeline-badge {
@@ -1352,4 +1362,111 @@ p {
   .section {
     padding: 40px 15px;
   }
+}
+
+/* ===== PDF MODAL ===== */
+.project-link.pdf {
+  background: var(--border-color);
+  color: var(--text-primary);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.project-link.pdf:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.pdf-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.pdf-modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.pdf-modal {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 28px;
+  min-width: 320px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  transform: translateY(16px) scale(0.97);
+  transition: transform 0.25s ease;
+}
+
+.pdf-modal-overlay.open .pdf-modal {
+  transform: translateY(0) scale(1);
+}
+
+.pdf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pdf-modal-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.pdf-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.pdf-modal-close:hover {
+  color: var(--text-primary);
+  background: var(--border-color);
+}
+
+.pdf-modal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pdf-modal-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.pdf-modal-list a:hover {
+  border-color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.05);
+  color: var(--primary-color);
 }
