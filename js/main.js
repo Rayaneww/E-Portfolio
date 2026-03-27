@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initRssModal();
   initPdfModal();
+  initEmailCopy();
 });
 
 // ===== NAV INDICATOR =====
@@ -482,6 +483,25 @@ function initPdfModal() {
   });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeModal();
+  });
+}
+
+// ===== EMAIL COPY =====
+function initEmailCopy() {
+  document.querySelectorAll('.email-copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const email = btn.dataset.email;
+      navigator.clipboard.writeText(email).then(() => {
+        btn.classList.add('copied');
+        btn.querySelector('.copy-icon').style.display = 'none';
+        btn.querySelector('.check-icon').style.display = '';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.querySelector('.copy-icon').style.display = '';
+          btn.querySelector('.check-icon').style.display = 'none';
+        }, 2000);
+      });
+    });
   });
 }
 

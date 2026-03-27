@@ -1124,6 +1124,65 @@ p {
   color: var(--text-secondary);
 }
 
+.email-card {
+  cursor: default;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.email-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.email-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 12px;
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.email-copy-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.email-copy-btn .email-text {
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.email-copy-btn .copy-icon,
+.email-copy-btn .check-icon {
+  flex-shrink: 0;
+  display: block;
+  color: inherit;
+}
+
+.email-copy-btn.copied {
+  border-color: var(--success-color);
+  color: var(--success-color);
+  background: rgba(16, 185, 129, 0.05);
+}
+
 /* ===== FOOTER ===== */
 .footer {
   background: var(--dark-bg);
