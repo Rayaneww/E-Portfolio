@@ -266,27 +266,7 @@ function initScrollAnimations() {
     observer.observe(el);
   });
 
-  // Animate skill bars on scroll
-  const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const skillFills = entry.target.querySelectorAll('.skill-fill');
-        skillFills.forEach(fill => {
-          const width = fill.style.width;
-          fill.style.animation = `fillBar 1s ease-out forwards`;
-          
-          // Trigger the animation by resetting and applying
-          fill.style.width = '0';
-          setTimeout(() => {
-            fill.style.width = width;
-          }, 100);
-        });
-        skillObserver.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('#competences').forEach(el => skillObserver.observe(el));
+  document.querySelectorAll('#competences').forEach(el => observer.observe(el));
 }
 
 // ===== RSS MODAL =====
