@@ -69,6 +69,43 @@ p {
   gap: 15px;
 }
 
+.nav-hide-btn {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: none;
+  border-radius: 0 0 20px 20px;
+  padding: 4px 18px 6px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  color: #6366f1;
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+  opacity: 0.7;
+}
+
+.nav-hide-btn:hover {
+  opacity: 1;
+  color: #6366f1;
+}
+
+.navbar.nav-hidden {
+  top: -70px;
+}
+
+.navbar.nav-hidden .nav-hide-btn {
+  opacity: 1;
+  bottom: -32px;
+  padding: 6px 20px 8px;
+}
+
+.navbar.nav-hidden .nav-hide-btn svg {
+  transform: rotate(180deg);
+}
+
 .nav-menu {
   position: relative;
   display: flex;
@@ -869,10 +906,28 @@ p {
   gap: 30px;
 }
 
+.veille-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
 .veille-card {
   max-width: 600px;
   width: 100%;
   text-align: center;
+}
+
+.veille-card-full {
+  max-width: 900px;
+}
+
+@media (max-width: 768px) {
+  .veille-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 .veille-icon {

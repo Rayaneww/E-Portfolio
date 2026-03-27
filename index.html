@@ -32,6 +32,11 @@
         <span></span>
       </button>
     </div>
+    <button class="nav-hide-btn" id="nav-hide-btn" aria-label="Masquer la navigation" title="Masquer la navigation">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="16" height="16">
+        <path d="M5 15l7-7 7 7"></path>
+      </svg>
+    </button>
   </header>
 
   <section class="hero">
@@ -564,49 +569,66 @@
     <div class="container">
       <h2 class="section-title">Veille Technologique</h2>
       <div class="veille-content">
-        <div class="veille-card">
-          <div class="veille-icon">🧬</div>
-          <h3>Bio-Informatique</h3>
-          <p>Je fais une veille technologique active pour rester informé des dernières innovations dans un domaine précis. Cette veille me permet de comprendre l'évolution des technologies et leurs applications pratiques.</p>
-          <p>J'ai choisi la bio-informatique car c'est un domaine qui combine bases de données, analyse de données et Big Data, en pleine expansion dans la santé et la recherche scientifique.</p>
-          <div class="veille-buttons">
-            <a href="https://www.pearltrees.com/rayaneww/veille-technologique/id93045913" target="_blank" class="btn btn-secondary">
-              <span>Consulter mon Pearltrees</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
-                <path d="M7 17L17 7M17 7H7M17 7V17"></path>
-              </svg>
-            </a>
-            <button id="rss-btn" class="btn btn-primary">
-              <span>Derniers articles RSS</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
-                <path d="M4 11a9 9 0 0 1 9 9"></path>
-                <path d="M4 4a16 16 0 0 1 16 16"></path>
-                <circle cx="5" cy="19" r="1" fill="currentColor"></circle>
-              </svg>
-            </button>
+        <div class="veille-row">
+          <div class="veille-card">
+            <div class="veille-icon">🧬</div>
+            <h3>Bio-Informatique</h3>
+            <p>Je fais une veille technologique active pour rester informé des dernières innovations dans un domaine précis. Cette veille me permet de comprendre l'évolution des technologies et leurs applications pratiques.</p>
+            <p>J'ai choisi la bio-informatique car c'est un domaine qui combine bases de données, analyse de données et Big Data, en pleine expansion dans la santé et la recherche scientifique.</p>
+            <div class="veille-buttons">
+              <a href="https://www.pearltrees.com/rayaneww/veille-technologique/id93045913" target="_blank" class="btn btn-secondary">
+                <span>Consulter mon Pearltrees</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                </svg>
+              </a>
+              <button id="rss-btn" class="btn btn-primary">
+                <span>Derniers articles RSS</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
+                  <path d="M4 11a9 9 0 0 1 9 9"></path>
+                  <path d="M4 4a16 16 0 0 1 16 16"></path>
+                  <circle cx="5" cy="19" r="1" fill="currentColor"></circle>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="veille-card">
+            <div class="veille-icon">🤖</div>
+            <h3>Claude Code & IA</h3>
+            <p>Je suis de près l'évolution des outils d'intelligence artificielle appliqués au développement, avec un intérêt particulier pour Claude Code d'Anthropic et les assistants de codage.</p>
+            <p>Ce domaine transforme profondément les pratiques de développement en automatisant certaines tâches, en augmentant la productivité et en ouvrant de nouvelles façons de concevoir des logiciels.</p>
+            <div class="veille-buttons">
+              <a href="https://www.pearltrees.com/rayaneww/claude-code-veille/id103196414" target="_blank" class="btn btn-secondary">
+                <span>Consulter mon Pearltrees</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                </svg>
+              </a>
+              <button id="rss-btn-claude" class="btn btn-primary">
+                <span>Derniers articles RSS</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
+                  <path d="M4 11a9 9 0 0 1 9 9"></path>
+                  <path d="M4 4a16 16 0 0 1 16 16"></path>
+                  <circle cx="5" cy="19" r="1" fill="currentColor"></circle>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
-        <div class="veille-card">
-          <div class="veille-icon">🤖</div>
-          <h3>Claude Code & IA</h3>
-          <p>Je suis de près l'évolution des outils d'intelligence artificielle appliqués au développement, avec un intérêt particulier pour Claude Code d'Anthropic et les assistants de codage.</p>
-          <p>Ce domaine transforme profondément les pratiques de développement en automatisant certaines tâches, en augmentant la productivité et en ouvrant de nouvelles façons de concevoir des logiciels.</p>
+        <div class="veille-card veille-card-full">
+          <div class="veille-icon">📚</div>
+          <h3>Veille collective BTS SIO 2026</h3>
+          <p>Site de veille technologique collaboratif regroupant l'ensemble des veilles de notre promotion BTS SIO pour l'année 2026. Chaque étudiant y partage ses recherches et découvertes dans son domaine de veille.</p>
+          <p>Ce projet collectif nous permet de mutualiser nos connaissances et de couvrir un large spectre des évolutions technologiques actuelles.</p>
           <div class="veille-buttons">
-            <a href="https://www.pearltrees.com/rayaneww/claude-code-veille/id103196414" target="_blank" class="btn btn-secondary">
-              <span>Consulter mon Pearltrees</span>
+            <a href="https://rayaneww.github.io/VeilleSIO2026/" target="_blank" class="btn btn-secondary">
+              <span>Consulter le site de veille</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
                 <path d="M7 17L17 7M17 7H7M17 7V17"></path>
               </svg>
             </a>
-            <button id="rss-btn-claude" class="btn btn-primary">
-              <span>Derniers articles RSS</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
-                <path d="M4 11a9 9 0 0 1 9 9"></path>
-                <path d="M4 4a16 16 0 0 1 16 16"></path>
-                <circle cx="5" cy="19" r="1" fill="currentColor"></circle>
-              </svg>
-            </button>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initNavIndicator();
   initHamburger();
+  initNavHide();
   initCarousel();
   initScrollAnimations();
   initRssModal();
@@ -128,6 +129,18 @@ function initNavigation() {
         navMenu.classList.remove('open');
       }
     });
+  });
+}
+
+// ===== NAV HIDE =====
+function initNavHide() {
+  const btn = document.getElementById('nav-hide-btn');
+  const navbar = document.querySelector('.navbar');
+
+  btn.addEventListener('click', () => {
+    const hidden = navbar.classList.toggle('nav-hidden');
+    btn.setAttribute('aria-label', hidden ? 'Afficher la navigation' : 'Masquer la navigation');
+    btn.setAttribute('title', hidden ? 'Afficher la navigation' : 'Masquer la navigation');
   });
 }
 
