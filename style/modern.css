@@ -896,7 +896,6 @@ p {
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 600;
-  margin-bottom: 12px;
 }
 
 .project-tags {
@@ -913,6 +912,27 @@ p {
   border-radius: 15px;
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.project-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.badge-perso {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #fff;
 }
 
 .project-links {
