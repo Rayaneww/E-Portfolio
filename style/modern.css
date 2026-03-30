@@ -934,6 +934,14 @@ p {
   background: linear-gradient(135deg, #f59e0b, #ef4444);
   color: #fff;
 }
+.badge-groupe {
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  color: #fff;
+}
+.badge-stage {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+}
 
 .project-links {
   display: flex;
