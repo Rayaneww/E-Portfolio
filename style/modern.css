@@ -1132,8 +1132,9 @@ p {
 }
 
 .tp-link-doc {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: #fff;
+  background: var(--border-color);
+  color: var(--text-primary);
+  cursor: pointer;
 }
 
 .tp-link-doc:hover {
@@ -1142,7 +1143,7 @@ p {
 }
 
 .tp-link-site {
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: #fff;
 }
 
