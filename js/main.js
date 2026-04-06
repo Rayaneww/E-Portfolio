@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRssModal();
   initPdfModal();
   initEmailCopy();
+  initTpAccordion();
 });
 
 // ===== NAV INDICATOR =====
@@ -515,6 +516,54 @@ function initEmailCopy() {
         }, 2000);
       });
     });
+  });
+}
+
+// ===== TP ACCORDION =====
+function initTpAccordion() {
+  const accordion = document.querySelector('.tp-accordion');
+  if (!accordion) return;
+
+  const btn = accordion.querySelector('.tp-accordion-header');
+  const wrapper = accordion.querySelector('.tp-grid-wrapper');
+  const cards = accordion.querySelectorAll('.tp-card');
+
+  btn.addEventListener('click', () => {
+    const isOpen = accordion.classList.contains('open');
+
+    if (isOpen) {
+      // Fermeture
+      wrapper.style.height = wrapper.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        wrapper.style.height = '0';
+      });
+      accordion.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      // Ouverture
+      accordion.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      wrapper.style.height = wrapper.scrollHeight + 'px';
+
+      // Stagger des cartes
+      cards.forEach((card, i) => {
+        card.style.transitionDelay = `${i * 0.08}s`;
+      });
+
+      wrapper.addEventListener('transitionend', function handler() {
+        wrapper.style.height = 'auto';
+        wrapper.removeEventListener('transitionend', handler);
+      });
+    }
+  });
+
+  // Reset delays après fermeture
+  wrapper.addEventListener('transitionend', () => {
+    if (!accordion.classList.contains('open')) {
+      cards.forEach(card => {
+        card.style.transitionDelay = '0s';
+      });
+    }
   });
 }
 
