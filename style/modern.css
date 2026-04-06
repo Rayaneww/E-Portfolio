@@ -1141,6 +1141,16 @@ p {
   box-shadow: 0 6px 15px rgba(99, 102, 241, 0.35);
 }
 
+.tp-link-site {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+}
+
+.tp-link-site:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(16, 185, 129, 0.35);
+}
+
 /* ===== VEILLE SECTION ===== */
 .veille-content {
   display: flex;
