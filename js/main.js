@@ -4,9 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initNavIndicator();
   initHamburger();
+  initNavHide();
   initCarousel();
   initScrollAnimations();
   initRssModal();
+  initPdfModal();
+  initEmailCopy();
 });
 
 // ===== NAV INDICATOR =====
@@ -126,6 +129,18 @@ function initNavigation() {
         navMenu.classList.remove('open');
       }
     });
+  });
+}
+
+// ===== NAV HIDE =====
+function initNavHide() {
+  const btn = document.getElementById('nav-hide-btn');
+  const navbar = document.querySelector('.navbar');
+
+  btn.addEventListener('click', () => {
+    const hidden = navbar.classList.toggle('nav-hidden');
+    btn.setAttribute('aria-label', hidden ? 'Afficher la navigation' : 'Masquer la navigation');
+    btn.setAttribute('title', hidden ? 'Afficher la navigation' : 'Masquer la navigation');
   });
 }
 
@@ -265,27 +280,7 @@ function initScrollAnimations() {
     observer.observe(el);
   });
 
-  // Animate skill bars on scroll
-  const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const skillFills = entry.target.querySelectorAll('.skill-fill');
-        skillFills.forEach(fill => {
-          const width = fill.style.width;
-          fill.style.animation = `fillBar 1s ease-out forwards`;
-          
-          // Trigger the animation by resetting and applying
-          fill.style.width = '0';
-          setTimeout(() => {
-            fill.style.width = width;
-          }, 100);
-        });
-        skillObserver.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('#competences').forEach(el => skillObserver.observe(el));
+  document.querySelectorAll('#competences').forEach(el => observer.observe(el));
 }
 
 // ===== RSS MODAL =====
@@ -450,6 +445,76 @@ if ('IntersectionObserver' in window) {
 
   document.querySelectorAll('img[data-src]').forEach(img => {
     imageObserver.observe(img);
+  });
+}
+
+// ===== PDF MODAL =====
+function initPdfModal() {
+  const overlay = document.getElementById('pdf-modal');
+  const list = document.getElementById('pdf-modal-list');
+  const closeBtn = overlay.querySelector('.pdf-modal-close');
+
+  function openModal(pdfs) {
+    list.innerHTML = '';
+    pdfs.forEach(({ name, url }) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <a href="${url}" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="9" y1="13" x2="15" y2="13"></line>
+            <line x1="9" y1="17" x2="15" y2="17"></line>
+          </svg>
+          ${name}
+        </a>`;
+      list.appendChild(li);
+    });
+    overlay.setAttribute('aria-hidden', 'false');
+    overlay.classList.add('open');
+  }
+
+  function closeModal() {
+    overlay.setAttribute('aria-hidden', 'true');
+    overlay.classList.remove('open');
+  }
+
+  document.querySelectorAll('.project-link.pdf').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pdfs = JSON.parse(btn.dataset.pdfs);
+      if (pdfs.length === 1) {
+        window.open(pdfs[0].url, '_blank', 'noopener');
+      } else {
+        openModal(pdfs);
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+  });
+}
+
+// ===== EMAIL COPY =====
+function initEmailCopy() {
+  document.querySelectorAll('.email-copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const email = btn.dataset.email;
+      navigator.clipboard.writeText(email).then(() => {
+        btn.classList.add('copied');
+        btn.querySelector('.copy-icon').style.display = 'none';
+        btn.querySelector('.check-icon').style.display = '';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.querySelector('.copy-icon').style.display = '';
+          btn.querySelector('.check-icon').style.display = 'none';
+        }, 2000);
+      });
+    });
   });
 }
 

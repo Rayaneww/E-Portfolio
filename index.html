@@ -32,6 +32,11 @@
         <span></span>
       </button>
     </div>
+    <button class="nav-hide-btn" id="nav-hide-btn" aria-label="Masquer la navigation" title="Masquer la navigation">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="16" height="16">
+        <path d="M5 15l7-7 7 7"></path>
+      </svg>
+    </button>
   </header>
 
   <section class="hero">
@@ -41,8 +46,9 @@
           <h1 class="hero-title"><span class="highlight">Rayane Watteeuw</span></h1>
           <p class="hero-subtitle">Développeur Full Stack & Étudiant BTS SIO</p>
           <p class="hero-description">Passionné par la création d'expériences web innovantes et performantes</p>
+          <p class="alternance-tag">En recherche d'une alternance — Ingénieur Informatique à l'ESIEE Paris</p>
           <div class="hero-buttons">
-            <a href="images/Rayane Watteeuw (1).pdf" class="btn btn-primary" download="">
+            <a href="images/Rayane Watteeuw CV.pdf" class="btn btn-primary" download="">
               <span>Télécharger CV</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -60,6 +66,7 @@
         </div>
         <div class="hero-image">
           <div class="image-container">
+            <div class="image-ring"></div>
             <img src="images/photo.jpg" alt="Rayane Watteeuw" class="profile-image"/>
             <div class="image-glow"></div>
           </div>
@@ -133,6 +140,17 @@
           </div>
         </div>
 
+        <div class="timeline-item timeline-item--future">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-badge">À venir</span>
+            <h3>2026-2029 - Formation Ingénieur Informatique</h3>
+            <p class="timeline-school">ESIEE Paris, Noisy-le-Grand</p>
+            <p>Grand Admissible — Spécialité Design, Architecture et Développement. Formation d’ingénieur en informatique au sein d’une grande école reconnue, avec une spécialisation orientée conception logicielle, architecture système et développement d’applications.</p>
+            <p class="alternance-tag alternance-tag--timeline">🔍 En recherche d’une alternance</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -183,64 +201,57 @@
             <div class="skill-card">
               <img src="images/html.png" alt="HTML" class="skill-icon" />
               <h4>HTML5</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 85%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
               </div>
-              <span class="skill-level">85%</span>
             </div>
 
             <div class="skill-card">
               <img src="images/java.png" alt="Java" class="skill-icon" />
               <h4>Java</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 80%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
               </div>
-              <span class="skill-level">80%</span>
             </div>
 
             <div class="skill-card">
               <img src="images/php.png" alt="PHP" class="skill-icon" />
               <h4>PHP 8.x</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 75%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
               </div>
-              <span class="skill-level">75%</span>
             </div>
 
             <div class="skill-card">
               <img src="images/js.png" alt="JavaScript" class="skill-icon" />
               <h4>JavaScript</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 78%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
               </div>
-              <span class="skill-level">78%</span>
             </div>
 
             <div class="skill-card">
               <img src="images/css3.png" alt="CSS3" class="skill-icon" />
               <h4>CSS3</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 82%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
               </div>
-              <span class="skill-level">82%</span>
             </div>
 
             <div class="skill-card">
               <img src="images/python.png" alt="Python" class="skill-icon" />
               <h4>Python</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 70%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span>
               </div>
-              <span class="skill-level">70%</span>
             </div>
 
             <div class="skill-card">
               <img src="images/laravel.png" alt="Laravel" class="skill-icon" />
               <h4>Laravel</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 65%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span>
               </div>
-              <span class="skill-level">65%</span>
             </div>
           </div>
         </div>
@@ -251,55 +262,49 @@
             <div class="skill-card">
               <img src="images/vs.png" alt="VS Code" class="skill-icon" />
               <h4>Visual Studio Code</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 90%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
               </div>
-              <span class="skill-level">90%</span>
             </div>
 
             <div class="skill-card">
               <img src="images/eclipse.png" alt="Eclipse" class="skill-icon" />
               <h4>Eclipse IDE</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 85%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
               </div>
-              <span class="skill-level">85%</span>
             </div>
 
             <div class="skill-card">
               <img src="images/dr_java.png" alt="DrJava" class="skill-icon" />
               <h4>DrJava</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 75%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
               </div>
-              <span class="skill-level">75%</span>
             </div>
 
             <div class="skill-card">
               <img src="images/git.png" alt="Git & GitHub" class="skill-icon" />
               <h4>Git & GitHub</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 88%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
               </div>
-              <span class="skill-level">88%</span>
             </div>
 
             <div class="skill-card">
               <img src="images/mysql.png" alt="MySQL" class="skill-icon" />
               <h4>MySQL</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 80%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
               </div>
-              <span class="skill-level">80%</span>
             </div>
 
             <div class="skill-card">
               <img src="images/figma.png" alt="Figma" class="skill-icon" />
               <h4>Figma</h4>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 72%"></div>
+              <div class="skill-stars">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span>
               </div>
-              <span class="skill-level">72%</span>
             </div>
           </div>
         </div>
@@ -354,36 +359,16 @@
       <h2 class="section-title">Mes Projets</h2>
       
       <div class="projects-grid">
-        <article class="project-card">
-          <div class="project-image">
-            <img src="images/projet1.jpg" alt="Projet L1 - Gestion d'adhérents" />
-          </div>
-          <div class="project-content">
-            <span class="project-year">2023-2024</span>
-            <h3>Gestion d'Adhérents en Java</h3>
-            <p>Application console Java pour gérer un système d'adhérents avec gestion dynamique des adhésions.</p>
-            <div class="project-tags">
-              <span class="tag">Java</span>
-              <span class="tag">POO</span>
-              <span class="tag">Console</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Rayaneww/Projet-L1" target="_blank" class="project-link github">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </article>
 
         <article class="project-card">
           <div class="project-image">
             <img src="images/erreur.png" alt="Correcteur Automatique" />
           </div>
           <div class="project-content">
+              <div class="project-meta">
             <span class="project-year">2025</span>
+            <span class="project-badge badge-groupe">Projet de groupe</span>
+          </div>
             <h3>Qui est-ce ? Correcteur Automatique</h3>
             <p>Application web interactive de correction automatique d'erreurs sous forme de jeu.</p>
             <div class="project-tags">
@@ -404,40 +389,29 @@
                 </svg>
                 GitHub
               </a>
+              <button class="project-link pdf" data-pdfs='[{"name":"Rapport de projet","url":"pdf/Rapport de Projet Informatique _ Système Expert _Qui est-ce .pdf"}]'>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="9" y1="13" x2="15" y2="13"></line>
+                  <line x1="9" y1="17" x2="15" y2="17"></line>
+                </svg>
+                Documents PDF
+              </button>
             </div>
           </div>
         </article>
 
-        <article class="project-card">
-          <div class="project-image">
-            <img src="images/loda.png" alt="Projet Loiselet & Daigremont" class="zoom-out-load" />
-          </div>
-          <div class="project-content">
-            <span class="project-year">2025</span>
-            <h3>Projet de Stage Loiselet & Daigremont 1er Année</h3>
-            <p>Projet de gestion de fournisseur en CRUD</p>
-            <div class="project-tags">
-              <span class="tag">PHP</span>
-              <span class="tag">Mysql</span>
-              <span class="tag">CRUD</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Rayaneww/Projet-Stage" target="_blank" class="project-link github">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </article>
 
         <article class="project-card">
           <div class="project-image">
             <img src="images/CVVEN.png" alt="Projet CVVEN" />
           </div>
           <div class="project-content">
-            <span class="project-year">2025-2026</span>
+            <div class="project-meta">
+              <span class="project-year">2025-2026</span>
+              <span class="project-badge badge-groupe">Projet de groupe</span>
+            </div>
             <h3>Application Web CVVEN</h3>
             <p>Projet web développé avec Code Igniter, connecté à une base de données. Gestion d'hôtel.</p>
             <div class="project-tags">
@@ -460,6 +434,15 @@
                 </svg>
                 GitHub
               </a>
+              <button class="project-link pdf" data-pdfs='[{"name":"Rapport de projet","url":"pdf/CVVEN PROJET (5).pdf"}]'>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="9" y1="13" x2="15" y2="13"></line>
+                  <line x1="9" y1="17" x2="15" y2="17"></line>
+                </svg>
+                Documents PDF
+              </button>
             </div>
           </div>
         </article>
@@ -469,7 +452,10 @@
             <img src="images/LoDaStock.png" alt="Projet Loiselet & Daigremont " />
           </div>
           <div class="project-content">
-            <span class="project-year">2025</span>
+            <div class="project-meta">
+              <span class="project-year">2026</span>
+              <span class="project-badge badge-stage">Projet de stage</span>
+            </div>
             <h3>Projet de LoDaStock</h3>
             <p>Projet de gestion de Stock suite du projet de gestion de fournisseur en CRUD. Projet de stage de Deuxième année</p>
             <div class="project-tags">
@@ -487,6 +473,110 @@
                 </svg>
                 GitHub
               </a>
+              <button class="project-link pdf" data-pdfs='[{"name":"Compte Rendu Technique","url":"pdf/LoDaStock Compte Rendu Technique.pdf"},{"name":"Documentation Logiciel","url":"pdf/LoDaStock Documentation Logiciel.pdf"}]'>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="9" y1="13" x2="15" y2="13"></line>
+                  <line x1="9" y1="17" x2="15" y2="17"></line>
+                </svg>
+                Documents PDF
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/veille.png" alt="Projet TechFlow" />
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-year">2026</span>
+              <span class="project-badge badge-perso">Projet de perso</span>
+            </div>
+            <h3>TechFlow</h3>
+            <p>Application de veille technologique full-stack qui analyse et synthétise les tendances tech grace à des flux RSS, avec backend Python et frontend JavaScript, déployée sur Vercel.</p>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Python</span>
+              <span class="tag">Vercel</span>
+            </div>
+            <div class="project-links">
+              <a href="https://techflow.rayanewatteeuw.fr" target="_blank" class="project-link site">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                </svg>
+                Voir le site
+              </a>
+              <a href="https://github.com/Rayaneww/TechFlow" target="_blank" class="project-link github">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/JavaFX_Logo.png" alt="Projet CVVEN Java FX" />
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-year">2026</span>
+              <span class="project-badge badge-perso">Projet perso</span>
+            </div>
+            <h3>CVVEN Java FX</h3>
+            <p>Application de bureau (client lourd) de gestion hôtelière développée en JavaFX, structurée selon le modèle MVC, permettant l'administration complète d'un centre de vacances (clients, hébergements, réservations, facturation) avec une base de données MySQL.</p>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Java FX</span>
+              <span class="tag">Mysql</span>
+              <span class="tag">MVC</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rayaneww/CVVEN_JavaFX" target="_blank" class="project-link github">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/botc.png" alt="Projet BOTC Companion" />
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-year">2026</span>
+              <span class="project-badge badge-perso">Projet perso</span>
+            </div>
+            <h3>BOTC Companion</h3>
+            <p>Application web mobile "client léger" développée avec Next.js et Node.js/Socket.IO, permettant aux joueurs de rejoindre une partie de BOTC via QR code et au maître du jeu de gérer dynamiquement les rôles, les timers et les statuts en temps réel.</p>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Socket.IO</span>
+              <span class="tag">Claude code</span>
+            </div>
+            <div class="project-links">
+              <a href="https://botcc.rayanewatteeuw.fr" target="_blank" class="project-link site">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                </svg>
+                Voir le site
+              </a>
+              <a href="https://github.com/Rayaneww/BOTC" target="_blank" class="project-link github">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
             </div>
           </div>
         </article>
@@ -499,49 +589,66 @@
     <div class="container">
       <h2 class="section-title">Veille Technologique</h2>
       <div class="veille-content">
-        <div class="veille-card">
-          <div class="veille-icon">🧬</div>
-          <h3>Bio-Informatique</h3>
-          <p>Je fais une veille technologique active pour rester informé des dernières innovations dans un domaine précis. Cette veille me permet de comprendre l'évolution des technologies et leurs applications pratiques.</p>
-          <p>J'ai choisi la bio-informatique car c'est un domaine qui combine bases de données, analyse de données et Big Data, en pleine expansion dans la santé et la recherche scientifique.</p>
-          <div class="veille-buttons">
-            <a href="https://www.pearltrees.com/rayaneww/veille-technologique/id93045913" target="_blank" class="btn btn-secondary">
-              <span>Consulter mon Pearltrees</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
-                <path d="M7 17L17 7M17 7H7M17 7V17"></path>
-              </svg>
-            </a>
-            <button id="rss-btn" class="btn btn-primary">
-              <span>Derniers articles RSS</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
-                <path d="M4 11a9 9 0 0 1 9 9"></path>
-                <path d="M4 4a16 16 0 0 1 16 16"></path>
-                <circle cx="5" cy="19" r="1" fill="currentColor"></circle>
-              </svg>
-            </button>
+        <div class="veille-row">
+          <div class="veille-card">
+            <div class="veille-icon">🧬</div>
+            <h3>Bio-Informatique</h3>
+            <p>Je fais une veille technologique active pour rester informé des dernières innovations dans un domaine précis. Cette veille me permet de comprendre l'évolution des technologies et leurs applications pratiques.</p>
+            <p>J'ai choisi la bio-informatique car c'est un domaine qui combine bases de données, analyse de données et Big Data, en pleine expansion dans la santé et la recherche scientifique.</p>
+            <div class="veille-buttons">
+              <a href="https://www.pearltrees.com/rayaneww/veille-technologique/id93045913" target="_blank" class="btn btn-secondary">
+                <span>Consulter mon Pearltrees</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                </svg>
+              </a>
+              <button id="rss-btn" class="btn btn-primary">
+                <span>Derniers articles RSS</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
+                  <path d="M4 11a9 9 0 0 1 9 9"></path>
+                  <path d="M4 4a16 16 0 0 1 16 16"></path>
+                  <circle cx="5" cy="19" r="1" fill="currentColor"></circle>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="veille-card">
+            <div class="veille-icon">🤖</div>
+            <h3>Claude Code & IA</h3>
+            <p>Je suis de près l'évolution des outils d'intelligence artificielle appliqués au développement, avec un intérêt particulier pour Claude Code d'Anthropic et les assistants de codage.</p>
+            <p>Ce domaine transforme profondément les pratiques de développement en automatisant certaines tâches, en augmentant la productivité et en ouvrant de nouvelles façons de concevoir des logiciels.</p>
+            <div class="veille-buttons">
+              <a href="https://www.pearltrees.com/rayaneww/claude-code-veille/id103196414" target="_blank" class="btn btn-secondary">
+                <span>Consulter mon Pearltrees</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                </svg>
+              </a>
+              <button id="rss-btn-claude" class="btn btn-primary">
+                <span>Derniers articles RSS</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
+                  <path d="M4 11a9 9 0 0 1 9 9"></path>
+                  <path d="M4 4a16 16 0 0 1 16 16"></path>
+                  <circle cx="5" cy="19" r="1" fill="currentColor"></circle>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
-        <div class="veille-card">
-          <div class="veille-icon">🤖</div>
-          <h3>Claude Code & IA</h3>
-          <p>Je suis de près l'évolution des outils d'intelligence artificielle appliqués au développement, avec un intérêt particulier pour Claude Code d'Anthropic et les assistants de codage.</p>
-          <p>Ce domaine transforme profondément les pratiques de développement en automatisant certaines tâches, en augmentant la productivité et en ouvrant de nouvelles façons de concevoir des logiciels.</p>
+        <div class="veille-card veille-card-full">
+          <div class="veille-icon">📚</div>
+          <h3>Veille collective BTS SIO 2026</h3>
+          <p>Site de veille technologique collaboratif regroupant l'ensemble des veilles de notre promotion BTS SIO pour l'année 2026. Chaque étudiant y partage ses recherches et découvertes dans son domaine de veille.</p>
+          <p>Ce projet collectif nous permet de mutualiser nos connaissances et de couvrir un large spectre des évolutions technologiques actuelles.</p>
           <div class="veille-buttons">
-            <a href="https://www.pearltrees.com/rayaneww/claude-code-veille/id103196414" target="_blank" class="btn btn-secondary">
-              <span>Consulter mon Pearltrees</span>
+            <a href="https://rayaneww.github.io/VeilleSIO2026/" target="_blank" class="btn btn-secondary">
+              <span>Consulter le site de veille</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
                 <path d="M7 17L17 7M17 7H7M17 7V17"></path>
               </svg>
             </a>
-            <button id="rss-btn-claude" class="btn btn-primary">
-              <span>Derniers articles RSS</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
-                <path d="M4 11a9 9 0 0 1 9 9"></path>
-                <path d="M4 4a16 16 0 0 1 16 16"></path>
-                <circle cx="5" cy="19" r="1" fill="currentColor"></circle>
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -622,13 +729,32 @@
           <p>Explorez mes projets</p>
         </a>
 
-        <a href="mailto:watteeuwrayane@gmail.com" class="contact-card">
+        <div class="contact-card email-card">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40">
             <rect x="2" y="4" width="20" height="16" rx="2"></rect>
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
           </svg>
           <h3>Email</h3>
-          <p>Me contacter</p>
+          <div class="email-list">
+            <button class="email-copy-btn" data-email="watteeuwrayane@gmail.com" title="Copier">
+              <span class="email-text">watteeuwrayane@gmail.com</span>
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15" aria-hidden="true" style="display:none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </button>
+            <button class="email-copy-btn" data-email="rayane.watteeuw@edu.esiee.fr" title="Copier">
+              <span class="email-text">rayane.watteeuw@edu.esiee.fr</span>
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15" aria-hidden="true" style="display:none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <a href="https://hub.docker.com/repositories/rwatteeuw" target="_blank" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+            <path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .103.082.185.185.186m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.186.186 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.185.186v1.887c0 .102.083.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 0 0-.75.748 11.376 11.376 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 0 0 3.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/>
+          </svg>
+          <h3>Docker Hub</h3>
+          <p>Mes images Docker</p>
         </a>
       </div>
     </div>
@@ -638,13 +764,27 @@
     <div class="container">
       <p>&copy; 2026 Rayane Watteeuw. Tous droits réservés.</p>
       <div class="footer-links">
-        <a href="#profil">Profil</a>
-        <a href="#formations">Formations</a>
-        <a href="#competences">Compétences</a>
-        <a href="#projets">Projets</a>
+          <a href="#profil" class="nav-link active">Profil</a>
+          <a href="#formations" class="nav-link">Formations</a>        
+          <a href="#stages" class="nav-link">Stages</a>
+          <a href="#competences" class="nav-link">Compétences</a>
+          <a href="#projets" class="nav-link">Projets</a>
+          <a href="#veille" class="nav-link">Veille</a>
+          <a href="#contact" class="nav-link">Contact</a>
       </div>
     </div>
   </footer>
+
+  <!-- Modal PDF -->
+  <div id="pdf-modal" class="pdf-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="pdf-modal">
+      <div class="pdf-modal-header">
+        <h3 class="pdf-modal-title">Choisir un document</h3>
+        <button class="pdf-modal-close" aria-label="Fermer">&times;</button>
+      </div>
+      <ul class="pdf-modal-list" id="pdf-modal-list"></ul>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
