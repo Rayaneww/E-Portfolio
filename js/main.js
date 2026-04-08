@@ -572,7 +572,6 @@ function initTpAccordion() {
 function initGalleryModal() {
   const images = [
     "images/CVVENSCREEN/cvven-1.png",
-    "images/CVVENSCREEN/cvven-2.png",
     "images/CVVENSCREEN/cvven-3.png",
     "images/CVVENSCREEN/cvven-4.png",
     "images/CVVENSCREEN/cvven-5.png",
