@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPdfModal();
   initEmailCopy();
   initTpAccordion();
+  initGalleryModal();
 });
 
 // ===== NAV INDICATOR =====
@@ -564,6 +565,79 @@ function initTpAccordion() {
         card.style.transitionDelay = '0s';
       });
     }
+  });
+}
+
+// ===== GALLERY MODAL =====
+function initGalleryModal() {
+  const images = [
+    "images/CVVENSCREEN/cvven-1.png",
+    "images/CVVENSCREEN/cvven-2.png",
+    "images/CVVENSCREEN/cvven-3.png",
+    "images/CVVENSCREEN/cvven-4.png",
+    "images/CVVENSCREEN/cvven-5.png",
+    "images/CVVENSCREEN/cvven-6.png",
+    "images/CVVENSCREEN/cvven-7.png",
+    "images/CVVENSCREEN/cvven-8.png",
+    "images/CVVENSCREEN/cvven-9.png",
+    "images/CVVENSCREEN/cvven-10.png",
+    "images/CVVENSCREEN/cvven-11.png"
+  ];
+
+  const btn = document.getElementById('cvven-gallery-btn');
+  const overlay = document.getElementById('gallery-modal');
+  const img = document.getElementById('gallery-img');
+  const counter = document.getElementById('gallery-counter');
+  const thumbsContainer = document.getElementById('gallery-thumbs');
+  const closeBtn = overlay.querySelector('.gallery-modal-close');
+  const prevBtn = overlay.querySelector('.gallery-prev');
+  const nextBtn = overlay.querySelector('.gallery-next');
+
+  let current = 0;
+
+  // Build thumbnails
+  images.forEach((src, i) => {
+    const thumb = document.createElement('img');
+    thumb.src = src;
+    thumb.className = 'gallery-thumb';
+    thumb.alt = `Capture ${i + 1}`;
+    thumb.addEventListener('click', () => goTo(i));
+    thumbsContainer.appendChild(thumb);
+  });
+
+  function goTo(index) {
+    current = index;
+    img.src = images[current];
+    counter.textContent = `${current + 1} / ${images.length}`;
+    thumbsContainer.querySelectorAll('.gallery-thumb').forEach((t, i) => {
+      t.classList.toggle('active', i === current);
+    });
+  }
+
+  function openModal() {
+    goTo(0);
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  btn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  prevBtn.addEventListener('click', () => goTo((current - 1 + images.length) % images.length));
+  nextBtn.addEventListener('click', () => goTo((current + 1) % images.length));
+
+  document.addEventListener('keydown', e => {
+    if (!overlay.classList.contains('open')) return;
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowLeft') goTo((current - 1 + images.length) % images.length);
+    if (e.key === 'ArrowRight') goTo((current + 1) % images.length);
   });
 }
 

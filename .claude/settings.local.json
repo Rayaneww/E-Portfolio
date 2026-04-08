@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(file \"C:/Users/Rayane/Dev/E-Portfolio/images/CVVENSCREEN/\"*)",
+      "Bash(python3:*)"
+    ]
+  }
+}
