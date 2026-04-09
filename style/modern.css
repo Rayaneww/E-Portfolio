@@ -1741,6 +1741,73 @@ p {
   .section {
     padding: 40px 15px;
   }
+
+  /* PDF Modal mobile */
+  .pdf-modal {
+    width: 95%;
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  .pdf-modal-title {
+    font-size: 1rem;
+  }
+
+  .pdf-modal-list {
+    flex-direction: column;
+  }
+
+  .pdf-modal-list a {
+    font-size: 0.95rem;
+    padding: 14px 16px;
+  }
+
+  /* Gallery Modal mobile */
+  .gallery-modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .gallery-modal {
+    border-radius: 20px 20px 0 0;
+    max-width: 100%;
+    max-height: 92vh;
+  }
+
+  .gallery-modal-header {
+    padding: 16px 18px;
+  }
+
+  .gallery-modal-title {
+    font-size: 1rem;
+  }
+
+  .gallery-modal-body {
+    padding: 12px 8px;
+    min-height: 200px;
+  }
+
+  .gallery-img-wrapper img {
+    max-height: 50vh;
+  }
+
+  .gallery-nav {
+    font-size: 2rem;
+    padding: 6px 8px;
+  }
+
+  .gallery-thumbs {
+    padding: 10px 12px 16px;
+    gap: 6px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .gallery-thumb {
+    width: 50px;
+    height: 35px;
+    flex-shrink: 0;
+  }
 }
 
 /* ===== PDF MODAL ===== */
