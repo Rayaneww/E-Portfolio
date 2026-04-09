@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initEmailCopy();
   initTpAccordion();
   initGalleryModal();
+  initLoDaStockGalleryModal();
 });
 
 // ===== NAV INDICATOR =====
@@ -595,6 +596,74 @@ function initGalleryModal() {
   let current = 0;
 
   // Build thumbnails
+  images.forEach((src, i) => {
+    const thumb = document.createElement('img');
+    thumb.src = src;
+    thumb.className = 'gallery-thumb';
+    thumb.alt = `Capture ${i + 1}`;
+    thumb.addEventListener('click', () => goTo(i));
+    thumbsContainer.appendChild(thumb);
+  });
+
+  function goTo(index) {
+    current = index;
+    img.src = images[current];
+    counter.textContent = `${current + 1} / ${images.length}`;
+    thumbsContainer.querySelectorAll('.gallery-thumb').forEach((t, i) => {
+      t.classList.toggle('active', i === current);
+    });
+  }
+
+  function openModal() {
+    goTo(0);
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  btn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  prevBtn.addEventListener('click', () => goTo((current - 1 + images.length) % images.length));
+  nextBtn.addEventListener('click', () => goTo((current + 1) % images.length));
+
+  document.addEventListener('keydown', e => {
+    if (!overlay.classList.contains('open')) return;
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowLeft') goTo((current - 1 + images.length) % images.length);
+    if (e.key === 'ArrowRight') goTo((current + 1) % images.length);
+  });
+}
+
+// ===== LODASTOEK GALLERY MODAL =====
+function initLoDaStockGalleryModal() {
+  const images = [
+    "images/LoDaStock/Capture d'écran 2026-04-08 103608.png",
+    "images/LoDaStock/Capture d'écran 2026-04-08 103639.png",
+    "images/LoDaStock/Capture d'écran 2026-04-08 103717.png",
+    "images/LoDaStock/Capture d'écran 2026-04-08 103743.png",
+    "images/LoDaStock/Capture d'écran 2026-04-08 103809.png",
+    "images/LoDaStock/Capture d'écran 2026-04-08 103848.png",
+    "images/LoDaStock/Capture d'écran 2026-04-08 103930.png"
+  ];
+
+  const btn = document.getElementById('lodastoek-gallery-btn');
+  const overlay = document.getElementById('lodastoek-gallery-modal');
+  const img = document.getElementById('lodastoek-gallery-img');
+  const counter = document.getElementById('lodastoek-gallery-counter');
+  const thumbsContainer = document.getElementById('lodastoek-gallery-thumbs');
+  const closeBtn = overlay.querySelector('.gallery-modal-close');
+  const prevBtn = overlay.querySelector('.gallery-prev');
+  const nextBtn = overlay.querySelector('.gallery-next');
+
+  let current = 0;
+
   images.forEach((src, i) => {
     const thumb = document.createElement('img');
     thumb.src = src;
