@@ -1552,7 +1552,11 @@ p {
     top: 10px;
     width: calc(100% - 20px);
   }
-  
+
+  .nav-hide-btn {
+    display: none;
+  }
+
   .hamburger {
     display: flex;
     background: white;
